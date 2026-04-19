@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@source "./index.html";
+@source "./src/**/*.{js,ts,jsx,tsx}";
+
+@theme {
+  --color-background: #fafaf8;
+  --color-surface: #ffffff;
+  --color-primary: #111110;
+  --color-secondary: #5f5f5f;
+  --color-accent: #e6e6e6;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.875rem;
+  }
+  
+  @media (min-width: 768px) {
+    body {
+      font-size: 1rem;
+    }
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    letter-spacing: -0.025em;
+  }
+
+  p {
+    line-height: 1.625;
+  }
+}
+
+@layer utilities {
+  .section-divider {
+    border-top: 1px solid var(--color-accent);
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
