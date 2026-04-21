@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="flex flex-col items-center gap-2 pt-2">
         {/* Signature logo */}
         <img
-          src="/Hans Sign.png"
+          src="https://res.cloudinary.com/do5jy6iqh/image/upload/v1776751283/Hans_Sign_a197wi.png"
           alt={`${resumeData.personal.name[lang]} signature`}
           className="h-20 sm:h-24 w-auto signature-img"
         />

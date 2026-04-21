@@ -13,8 +13,11 @@
       "en": "I'm a passionate developer striving to create intuitive and engaging experiences. I'm a big believer that things can always be simpler than we think with applies tech on solution.",
       "vn": "Mình là một lập trình viên Fullstack, có niềm đam mê với việc tạo ra những trải nghiệm trực quan và hấp dẫn. Mình tin rằng mọi thứ đều có thể đơn giản hơn chúng ta nghĩ với áp dụng công nghệ vào giải pháp."
     },
-    "avatarUrl": "/avt.png",
-    "cvUrl": null,
+    "avatarUrl": "https://res.cloudinary.com/do5jy6iqh/image/upload/f_auto,q_auto/avt_h4rwvq",
+    "cvUrl": {
+      "en": "https://drive.google.com/file/d/195Z7bu6JLzM3WuT3IK-h9sReGpDKQEqt/view?usp=sharing",
+      "vn": "https://drive.google.com/file/d/195Z7bu6JLzM3WuT3IK-h9sReGpDKQEqt/view?usp=sharing"
+    },
     "availability": {
       "available": true,
       "status": {

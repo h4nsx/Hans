@@ -67,7 +67,7 @@ export default function Header({ personal }) {
             </a>
           ))}
 
-          {personal.cvUrl && (
+          {(personal.cvUrl?.en || personal.cvUrl?.vn) && (
             <button
               id="cv-preview-btn"
               onClick={() => setCvOpen(true)}
