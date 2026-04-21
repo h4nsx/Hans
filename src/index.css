@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Dancing+Script:wght@600&display=swap');
 @import "tailwindcss";
 
 @source "./index.html";
 @source "./src/**/*.{js,ts,jsx,tsx}";
+
+/* Enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-background: #fafaf8;
@@ -11,6 +15,17 @@
   --color-accent: #e6e6e6;
 
   --font-sans: "Inter", system-ui, sans-serif;
+  --font-script: "Dancing Script", cursive;
+}
+
+/* Dark mode: override theme CSS variables */
+html.dark {
+  --color-background: #111110;
+  --color-surface: #1a1a18;
+  --color-primary: #e8e8e6;
+  --color-secondary: #8a8a88;
+  --color-accent: #2a2a28;
+  color-scheme: dark;
 }
 
 @layer base {
@@ -20,17 +35,13 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     font-size: 0.875rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
-  
+
   @media (min-width: 768px) {
     body {
       font-size: 1rem;
     }
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
-    letter-spacing: -0.025em;
   }
 
   p {
@@ -44,5 +55,38 @@
     width: 100%;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    transition: border-color 0.2s ease;
+  }
+
+  /* Typing animation cursor */
+  .cursor-blink {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: var(--color-primary);
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+  }
+
+  .cursor-blink.done {
+    animation: none;
+    opacity: 0;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Signature image blend modes for light/dark */
+  .signature-img {
+    mix-blend-mode: multiply;
+    transition: filter 0.2s ease;
+  }
+
+  html.dark .signature-img {
+    filter: invert(1);
+    mix-blend-mode: screen;
   }
 }

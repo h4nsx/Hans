@@ -1,0 +1,73 @@
+{
+  "personal": {
+    "name": {
+      "en": "Hans",
+      "vn": "Võ Tuấn Hùng"
+    },
+    "role": {
+      "en": "Junior Fullstack developer",
+      "vn": "Junior Lập trình viên Fullstack"
+    },
+    "location": "Ho Chi Minh city, Vietnam",
+    "bio": {
+      "en": "I'm a passionate developer striving to create intuitive and engaging experiences. I'm a big believer that things can always be simpler than we think with applies tech on solution.",
+      "vn": "Mình là một lập trình viên Fullstack, có niềm đam mê với việc tạo ra những trải nghiệm trực quan và hấp dẫn. Mình tin rằng mọi thứ đều có thể đơn giản hơn chúng ta nghĩ với áp dụng công nghệ vào giải pháp."
+    },
+    "avatarUrl": "/avt.png",
+    "cvUrl": null,
+    "availability": {
+      "available": true,
+      "status": {
+        "en": "Open to opportunities",
+        "vn": "Đang tìm kiếm cơ hội mới"
+      }
+    },
+    "links": [
+      { "name": "Email", "url": "mailto:contact@hans-dev.eu.org" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/in/tuan-hung-vo-5822b1374" },
+      { "name": "GitHub", "url": "https://github.com/h4nsx" }
+    ]
+  },
+  "experience": [
+    {
+      "startDate": "Jul 2025",
+      "endDate": "Aug 2025",
+      "company": "NB-Global Group",
+      "role": {
+        "en": "AI Automation - Intern",
+        "vn": "Thực tập sinh AI Automation"
+      },
+      "location": "California, US - Remote",
+      "url": "https://www.linkedin.com/company/nb-global-group/"
+    }
+  ],
+  "projects": [
+    {
+      "year": "2025",
+      "name": "RugPull Detection",
+      "description": {
+        "en": "An open-source analytics tool built with React and Numpas to detect rugpulls based on Isolation Forest algorithms on Solana Ecosystem.",
+        "vn": "Một công cụ phân tích mã nguồn mở được xây dựng bằng React và Numpas để phát hiện rugpulls dựa trên thuật toán Isolation Forest trên hệ sinh thái Solana"
+      },
+      "url": "https://github.com/h4nsx/Rugpull-Detection"
+    },
+    {
+      "year": "2025",
+      "name": "SafeSwap",
+      "description": {
+        "en": "A web tool for swap token on Aptos Ecosystem with safety by analyzed the transaction history and liquidty of itself before hitting a swap button.",
+        "vn": "Công cụ web để swap token trên hệ sinh thái Aptos một cách an toàn bằng cách phân tích lịch sử giao dịch và thanh khoản của chính nó trước khi nhấn nút swap."
+      },
+      "url": "https://github.com/h4nsx/SafeSwap-Token"
+    },
+    {
+      "year": "2026",
+      "name": "Vyn Logistic",
+      "description": {
+        "en": "An AI System with 2 streams running independent at a same time for tracking and analyzing data of logistic process to optimize itself.",
+        "vn": "Một hệ thống AI với 2 luồng xử lý độc lập chạy song song để theo dõi và phân tích dữ liệu của quy trình logistics nhằm tối ưu hóa chính nó."
+      },
+      "url": "https://github.com/h4nsx/Vyn-Logistic"
+    }
+  ]
+}
