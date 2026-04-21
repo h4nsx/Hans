@@ -47,3 +47,12 @@ logs
 .vercel
 oci
 .netlify
+
+# Personal assets — kept local only, hosted externally in production
+# Images, CV, and signature files should be served from Cloudinary / Google Drive / GitHub Releases
+/public/*.png
+/public/*.jpg
+/public/*.jpeg
+/public/*.webp
+/public/*.gif
+/public/*.pdf
