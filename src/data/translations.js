@@ -10,6 +10,7 @@ export const translations = {
     cvMobileNote: "PDF preview is not supported on mobile. You can open it in your browser or download it directly.",
     openInBrowser: "Open in Browser",
     downloadCV: "Download CV",
+    highlights: "Highlights",
   },
   vn: {
     about: "Giới Thiệu",
@@ -22,5 +23,6 @@ export const translations = {
     cvMobileNote: "Trình xem PDF không hỗ trợ trên di động. Bạn có thể mở trong trình duyệt hoặc tải xuống trực tiếp.",
     openInBrowser: "Mở trong trình duyệt",
     downloadCV: "Tải CV",
+    highlights: "Nổi Bật",
   },
 };

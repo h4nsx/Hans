@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Section from './components/Section';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Highlights from './components/Highlights';
 import Footer from './components/Footer';
 
 function Resume() {
@@ -37,6 +38,15 @@ function Resume() {
               <div className="section-divider" />
               <Section title={t.projects}>
                 <Projects projects={resumeData.projects} />
+              </Section>
+            </>
+          )}
+
+          {resumeData.highlights?.length > 0 && (
+            <>
+              <div className="section-divider" />
+              <Section title={t.highlights}>
+                <Highlights highlights={resumeData.highlights} />
               </Section>
             </>
           )}

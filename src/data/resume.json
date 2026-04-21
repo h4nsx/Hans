@@ -72,5 +72,20 @@
       },
       "url": "https://github.com/h4nsx/Vyn-Logistic"
     }
+  ],
+  "highlights": [
+    {
+      "year": "2025",
+      "title": {
+        "en": "Top Finalist — AI Hackathon",
+        "vn": "Top Finalist — AI Hackathon"
+      },
+      "issuer": {
+        "en": "Example Organization",
+        "vn": "Tổ chức mẫu"
+      },
+      "type": ["hackathon", "award"],
+      "url": ""
+    }
   ]
 }
