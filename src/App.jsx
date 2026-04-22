@@ -12,9 +12,37 @@ import Projects from './components/Projects';
 import Highlights from './components/Highlights';
 import Footer from './components/Footer';
 
+// ── Date sort helper ────────────────────────────────────────────────────────
+// Converts "Jul 2025" → 202507  |  "2025" → 202500  |  "" / null → 0
+const MONTHS = { Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12 };
+function parseDateToNum(str) {
+  if (!str) return 0;
+  const parts = str.trim().split(' ');
+  const year = parseInt(parts.length === 2 ? parts[1] : parts[0], 10) || 0;
+  const month = parts.length === 2 ? (MONTHS[parts[0]] ?? 0) : 0;
+  return year * 100 + month;
+}
+
+function byNewest(getDate) {
+  return (a, b) => parseDateToNum(getDate(b)) - parseDateToNum(getDate(a));
+}
+
 function Resume() {
   const { lang } = useLang();
   const t = translations[lang];
+
+  // Pre-sorted copies — newest first, original JSON never mutated
+  const experience = (resumeData.experience ?? [])
+    .slice()
+    .sort(byNewest((j) => j.startDate ?? j.startYear ?? ''));
+
+  const projects = (resumeData.projects ?? [])
+    .slice()
+    .sort(byNewest((p) => p.year ?? ''));
+
+  const highlights = (resumeData.highlights ?? [])
+    .slice()
+    .sort(byNewest((h) => h.year ?? ''));
 
   return (
     <div className="min-h-screen py-12 px-5 sm:px-8 md:px-12 flex flex-col items-center selection:bg-neutral-200 dark:selection:bg-neutral-700">
@@ -30,23 +58,23 @@ function Resume() {
           <div className="section-divider" />
 
           <Section title={t.experience}>
-            <Experience experience={resumeData.experience} />
+            <Experience experience={experience} />
           </Section>
 
-          {resumeData.projects?.length > 0 && (
+          {projects.length > 0 && (
             <>
               <div className="section-divider" />
               <Section title={t.projects}>
-                <Projects projects={resumeData.projects} />
+                <Projects projects={projects} />
               </Section>
             </>
           )}
 
-          {resumeData.highlights?.length > 0 && (
+          {highlights.length > 0 && (
             <>
               <div className="section-divider" />
               <Section title={t.highlights}>
-                <Highlights highlights={resumeData.highlights} />
+                <Highlights highlights={highlights} />
               </Section>
             </>
           )}
