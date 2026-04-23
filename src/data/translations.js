@@ -11,6 +11,7 @@ export const translations = {
     openInBrowser: "Open in Browser",
     downloadCV: "Download CV",
     highlights: "Highlights",
+    cvFallbackNotice: "{requested} CV is not available yet. Showing {shown} version instead."
   },
   vn: {
     about: "Giới Thiệu",
@@ -24,5 +25,6 @@ export const translations = {
     openInBrowser: "Mở trong trình duyệt",
     downloadCV: "Tải CV",
     highlights: "Nổi Bật",
+    cvFallbackNotice: "CV ngôn ngữ {requested} chưa có sẵn. Đang hiển thị bản {shown} để thay thế."
   },
 };

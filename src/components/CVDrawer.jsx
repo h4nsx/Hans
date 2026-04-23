@@ -23,15 +23,18 @@ export default function CVDrawer({ cvUrl, isOpen, onClose }) {
     if (isOpen) setCvLang(siteLang);
   }, [isOpen, siteLang]);
 
-  // Resolve which URL is active
-  const activeUrl = cvUrl?.[cvLang] || cvUrl?.en || cvUrl?.vn || '';
-  const fileName = activeUrl.split('/').pop()?.split('?')[0] || 'cv.pdf';
-
   // Determine which languages actually have a URL
   const hasEn = Boolean(cvUrl?.en);
   const hasVn = Boolean(cvUrl?.vn);
   const hasBoth = hasEn && hasVn;
   const hasAny = hasEn || hasVn;
+
+  // Resolve which URL is active — fall back to any available language
+  const requestedUrl = cvUrl?.[cvLang] || '';
+  const isFallback = !requestedUrl && hasAny;
+  const fallbackLang = !requestedUrl ? (hasEn ? 'en' : 'vn') : null;
+  const activeUrl = requestedUrl || cvUrl?.en || cvUrl?.vn || '';
+  const fileName = activeUrl.split('/').pop()?.split('?')[0] || 'cv.pdf';
 
   /**
    * Converts any supported share URL into a safe iframe embed URL.
@@ -70,6 +73,21 @@ export default function CVDrawer({ cvUrl, isOpen, onClose }) {
   }, [isOpen]);
 
   if (!hasAny) return null;
+
+  // ── Fallback notice banner ─────────────────────────────────────────────────
+  const FallbackNotice = () => isFallback ? (
+    <div className="mx-5 mt-3 px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 flex items-start gap-2">
+      <span className="text-amber-500 dark:text-amber-400 text-sm leading-none mt-[1px] shrink-0">⚠</span>
+      <p className="text-xs text-amber-700 dark:text-amber-300 leading-relaxed">
+        {t.cvFallbackNotice
+          ? t.cvFallbackNotice
+              .replace('{requested}', cvLang.toUpperCase())
+              .replace('{shown}', (fallbackLang ?? '').toUpperCase())
+          : `${cvLang.toUpperCase()} CV is not available yet. Showing ${(fallbackLang ?? '').toUpperCase()} version instead.`
+        }
+      </p>
+    </div>
+  ) : null;
 
   // ── Shared lang pill toggle (used in both desktop + mobile) ──────────────
   const LangPills = () => hasBoth ? (
@@ -133,6 +151,9 @@ export default function CVDrawer({ cvUrl, isOpen, onClose }) {
           </button>
         </div>
 
+        {/* Fallback notice */}
+        <FallbackNotice />
+
         {/* PDF iframe — re-mounts when URL changes */}
         <div className="flex-1 overflow-hidden bg-neutral-50 dark:bg-neutral-900">
           {isOpen && embedUrl && (
@@ -154,7 +175,7 @@ export default function CVDrawer({ cvUrl, isOpen, onClose }) {
             className="flex items-center justify-center gap-2 w-full py-2.5 rounded-md bg-primary dark:bg-[#e8e8e6] text-white dark:text-[#111110] text-sm font-medium hover:opacity-90 transition-opacity"
           >
             <Download size={14} />
-            {t.downloadCV} ({cvLang.toUpperCase()})
+            {t.downloadCV} ({(isFallback ? fallbackLang : cvLang)?.toUpperCase()})
           </a>
         </div>
       </aside>
@@ -192,6 +213,9 @@ export default function CVDrawer({ cvUrl, isOpen, onClose }) {
           </button>
         </div>
 
+        {/* Fallback notice */}
+        <FallbackNotice />
+
         {/* Note */}
         <p className="px-5 pb-3 text-xs text-secondary leading-relaxed">
           {t.cvMobileNote ?? 'PDF preview is not supported on mobile. Open it in your browser or download directly.'}
@@ -206,7 +230,7 @@ export default function CVDrawer({ cvUrl, isOpen, onClose }) {
             className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 text-sm font-medium text-primary hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
           >
             <ExternalLink size={14} />
-            {t.openInBrowser ?? 'Open in Browser'} ({cvLang.toUpperCase()})
+            {t.openInBrowser ?? 'Open in Browser'} ({(isFallback ? fallbackLang : cvLang)?.toUpperCase()})
           </a>
           <a
             href={activeUrl}
@@ -214,7 +238,7 @@ export default function CVDrawer({ cvUrl, isOpen, onClose }) {
             className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-primary dark:bg-[#e8e8e6] text-white dark:text-[#111110] text-sm font-medium hover:opacity-90 transition-opacity"
           >
             <Download size={14} />
-            {t.downloadCV} ({cvLang.toUpperCase()})
+            {t.downloadCV} ({(isFallback ? fallbackLang : cvLang)?.toUpperCase()})
           </a>
         </div>
       </div>
