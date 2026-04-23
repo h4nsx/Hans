@@ -5,7 +5,7 @@
       "vn": "Võ Tuấn Hùng"
     },
     "role": {
-      "en": "Fresher Fullstack developer",
+      "en": "Fresher Fullstack Developer",
       "vn": "Fresher Lập trình viên Fullstack"
     },
     "location": "Ho Chi Minh city, Vietnam",
@@ -77,14 +77,105 @@
     {
       "year": "2025",
       "title": {
-        "en": "Top Finalist — AI Hackathon",
-        "vn": "Top Finalist — AI Hackathon"
+        "en": "Second Place - Solana Hackathon",
+        "vn": "Giải nhì - Solana Hackathon"
       },
       "issuer": {
-        "en": "Example Organization",
-        "vn": "Tổ chức mẫu"
+        "en": "SuperTeam VN - International University",
+        "vn": "SuperTeam VN - Đại học Quốc tế"
+      },
+      "type": ["hackathon", "award", "medal"],
+      "url": "https://github.com/h4nsx/Rugpull-Detection"
+    },
+    {
+      "year": "2025",
+      "title": {
+        "en": "Top 5 Student Team - Aptos Hackathon",
+        "vn": "Top 5 đội sinh viên xuất sắc nhất - Aptos Hackathon"
+      },
+      "issuer": {
+        "en": "Aptos Vietnam - Alpha Team",
+        "vn": "Aptos Vietnam - Alpha Team"
       },
       "type": ["hackathon", "award"],
+      "url": "https://github.com/h4nsx/Rugpull-Detection"
+    },
+    {
+      "year": "2026",
+      "title": {
+        "en":"Lotus Hackathon",
+        "vn": "Lotus Hackathon"
+      },
+      "issuer": {
+        "en": "LotusHacks - HackHavard - GenAI Fund",
+        "vn": "LotusHacks - HackHavard - GenAI Fund"
+      },
+      "type": ["hackathon", "recognition"],
+      "url": ""
+    },
+    {
+      "year": "2024",
+      "title": {
+        "en": "Responsive Web Design",
+        "vn": "Responsive Web Design"
+      },
+      "issuer": {
+        "en": "freeCodeCamp",
+        "vn": "freeCodeCamp"
+      },
+      "type": ["certificate"],
+      "url": "https://www.freecodecamp.org/certification/hazenvo_1205/responsive-web-design"
+    },
+    {
+      "year": "2025",
+      "title": {
+        "en": "JavaScript Algorithms and Data Structures",
+        "vn": "JavaScript Algorithms and Data Structures"
+      },
+      "issuer": {
+        "en": "freeCodeCamp",
+        "vn": "freeCodeCamp"
+      },
+      "type": ["certificate"],
+      "url": "https://www.freecodecamp.org/certification/hazenvo_1205/javascript-algorithms-and-data-structures-v8"
+    },
+    {
+      "year": "2025",
+      "title": {
+        "en": "Backend Development And APIs",
+        "vn": "Backend Development And APIs"
+      },
+      "issuer": {
+        "en": "freeCodeCamp",
+        "vn": "freeCodeCamp"
+      },
+      "type": ["certificate"],
+      "url": "https://www.freecodecamp.org/certification/hazenvo_1205/back-end-development-and-apis"
+    },
+    {
+      "year": "2024",
+      "title": {
+        "en": "750 TOEIC",
+        "vn": "750 điểm TOEIC"
+      },
+      "issuer": {
+        "en": "IIG Vietnam",
+        "vn": "IIG Vietnam"
+      },
+      "type": ["recognition", "certificate"],
+      "url": ""
+    },
+    {
+      "year": "2019",
+      "title": {
+        "en": "Third Prize — Provincial Science and Engineering Fair",
+        "vn": "Giải ba — Hội thi Khoa học kỹ thuật tỉnh"
+      },
+      "issuer": {
+        "en": "Department of Education and Training of Ba Ria - Vung Tau Province",
+        "vn": "Sở Giáo dục và Đào tạo tỉnh Bà Rịa - Vũng Tàu"
+      },
+      "type": ["award", "medal"],
       "url": ""
     }
   ]

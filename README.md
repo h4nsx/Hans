@@ -1,8 +1,8 @@
 # Hans — Personal Site
 
-> Minimalist personal website for **Võ Tuấn Hùng (Hans)** — Junior Fullstack Developer based in Ho Chi Minh City, Vietnam.
+> Minimalist personal website for **Võ Tuấn Hùng (Hans)** — Fresher Fullstack Developer based in Ho Chi Minh City, Vietnam.
 
-🌐 **Live:** [hans-dev.eu.org](https://hans-dev.eu.org)
+🌐 **Live:** [hansx.eu.org](https://hansx.eu.org)
 
 ---
 
@@ -28,7 +28,7 @@
 | Styling | Tailwind CSS v4 |
 | Icons | Lucide React |
 | Font | Inter (body) · Dancing Script (footer) |
-| Hosting | Custom domain (`hans-dev.eu.org`) |
+| Hosting | Custom domain (`hansx.eu.org`) |
 
 ---
 
@@ -109,7 +109,7 @@ All content lives in a single file — no database, no CMS.
 {
   "personal": {
     "name": { "en": "Hans", "vn": "Võ Tuấn Hùng" },
-    "role": { "en": "Junior Fullstack developer", "vn": "..." },
+    "role": { "en": "Fresher Fullstack developer", "vn": "..." },
     "bio":  { "en": "...", "vn": "..." },
     "availability": { "available": true, "status": { "en": "Open to opportunities", "vn": "..." } },
     "links": [
