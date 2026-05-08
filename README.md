@@ -2,7 +2,7 @@
 
 > Minimalist personal website for **Võ Tuấn Hùng (Hans)** — Fresher Fullstack Developer based in Ho Chi Minh City, Vietnam.
 
-🌐 **Live:** [hansx.eu.org](https://hansx.eu.org)
+🌐 **Live:** [hans-orpin.vercel.app]([https://hans-orpin.vercel.app/])
 
 ---
 
