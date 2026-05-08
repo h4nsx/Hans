@@ -28,7 +28,6 @@
 | Styling | Tailwind CSS v4 |
 | Icons | Lucide React |
 | Font | Inter (body) · Dancing Script (footer) |
-| Hosting | Custom domain (`hansx.eu.org`) |
 
 ---
 
