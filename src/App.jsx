@@ -1,5 +1,4 @@
 import React from 'react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import { LanguageProvider, useLang } from './context/LanguageContext';
 import { ThemeProvider } from './context/ThemeContext';
 import { translations } from './data/translations';
@@ -92,7 +91,6 @@ export default function App() {
     <ThemeProvider>
       <LanguageProvider>
         <Resume />
-        <SpeedInsights />
       </LanguageProvider>
     </ThemeProvider>
   );
