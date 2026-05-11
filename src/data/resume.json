@@ -5,13 +5,13 @@
       "vn": "Võ Tuấn Hùng"
     },
     "role": {
-      "en": "Fresher Fullstack Developer",
-      "vn": "Fresher Lập trình viên Fullstack"
+      "en": "Junior Fullstack Developer",
+      "vn": "Lập trình viên Fullstack (Junior)"
     },
     "location": "Ho Chi Minh city, Vietnam",
     "bio": {
-      "en": "I'm a passionate developer striving to create intuitive and engaging experiences. I'm a big believer that things can always be simpler than we think with applies tech on solution.",
-      "vn": "Mình là một lập trình viên Fullstack, có niềm đam mê với việc tạo ra những trải nghiệm trực quan và hấp dẫn. Mình tin rằng mọi thứ đều có thể đơn giản hơn chúng ta nghĩ với áp dụng công nghệ vào giải pháp."
+      "en": "I'm a passionate Fullstack Developer striving to create intuitive and engaging experiences. I strongly believe that complex problems can often be solved elegantly by applying the right technology.",
+      "vn": "Mình là một lập trình viên Fullstack đam mê tạo ra những trải nghiệm trực quan và hấp dẫn. Mình luôn tin rằng các vấn đề phức tạp đều có thể được giải quyết một cách tinh tế thông qua việc ứng dụng công nghệ phù hợp."
     },
     "avatarUrl": "https://res.cloudinary.com/do5jy6iqh/image/upload/f_auto,q_auto/avt_h4rwvq",
     "cvUrl": {
@@ -27,7 +27,7 @@
     },
     "links": [
       { "name": "Email", "url": "mailto:contact@hans-dev.eu.org" },
-      { "name": "LinkedIn", "url": "https://linkedin.com/in/tuan-hung-vo-5822b1374" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/in/hans-vo" },
       { "name": "GitHub", "url": "https://github.com/h4nsx" }
     ]
   },
@@ -37,10 +37,14 @@
       "endDate": "Aug 2025",
       "company": "NB-Global Group",
       "role": {
-        "en": "AI Automation - Intern",
+        "en": "AI Automation Intern",
         "vn": "Thực tập sinh AI Automation"
       },
       "location": "California, US - Remote",
+      "description": {
+        "en": "Engineered automated data pipelines and backend workflows using n8n and Make to integrate AI-driven content generation models with external social media APIs. Managed webhooks and complex REST API integrations, significantly reducing manual operational overhead.",
+        "vn": "Xây dựng các luồng dữ liệu và quy trình tự động hóa backend sử dụng n8n và Make nhằm tích hợp mô hình AI tạo nội dung với các API mạng xã hội. Quản lý webhooks và các tích hợp REST API phức tạp, giúp công ty giảm thiểu đáng kể khối lượng công việc vận hành thủ công."
+      },
       "url": "https://www.linkedin.com/company/nb-global-group/"
     }
   ],
@@ -49,8 +53,8 @@
       "year": "2025",
       "name": "RugPull Detection",
       "description": {
-        "en": "An open-source analytics tool built with React and Numpas to detect rugpulls based on Isolation Forest algorithms on Solana Ecosystem.",
-        "vn": "Một công cụ phân tích mã nguồn mở được xây dựng bằng React và Numpas để phát hiện rugpulls dựa trên thuật toán Isolation Forest trên hệ sinh thái Solana"
+        "en": "An open-source analytics tool built with React and NumPy/Pandas to detect rug pulls using the Isolation Forest algorithm on the Solana Ecosystem.",
+        "vn": "Công cụ phân tích mã nguồn mở được xây dựng bằng React và NumPy/Pandas để phát hiện rug pull dựa trên thuật toán Isolation Forest trên hệ sinh thái Solana."
       },
       "url": "https://github.com/h4nsx/Rugpull-Detection"
     },
@@ -58,17 +62,17 @@
       "year": "2025",
       "name": "SafeSwap",
       "description": {
-        "en": "A web tool for swap token on Aptos Ecosystem with safety by analyzed the transaction history and liquidty of itself before hitting a swap button.",
-        "vn": "Công cụ web để swap token trên hệ sinh thái Aptos một cách an toàn bằng cách phân tích lịch sử giao dịch và thanh khoản của chính nó trước khi nhấn nút swap."
+        "en": "A secure web tool for swapping tokens on the Aptos Ecosystem, featuring automated transaction history and liquidity analysis prior to execution.",
+        "vn": "Một công cụ web an toàn hỗ trợ hoán đổi token trên hệ sinh thái Aptos, thông qua việc phân tích lịch sử giao dịch và thanh khoản trước khi thực hiện giao dịch."
       },
       "url": "https://github.com/h4nsx/SafeSwap-Token"
     },
     {
       "year": "2026",
-      "name": "Vyn Logistic",
+      "name": "Vyn Logistics",
       "description": {
-        "en": "An AI System with 2 streams running independent at a same time for tracking and analyzing data of logistic process to optimize itself.",
-        "vn": "Một hệ thống AI với 2 luồng xử lý độc lập chạy song song để theo dõi và phân tích dữ liệu của quy trình logistics nhằm tối ưu hóa chính nó."
+        "en": "An AI system featuring dual independent processing streams that concurrently track, analyze, and optimize logistics data workflows.",
+        "vn": "Hệ thống AI với 2 luồng xử lý độc lập chạy song song để theo dõi, phân tích dữ liệu quy trình logistics nhằm mục đích tự tối ưu hóa."
       },
       "url": "https://github.com/h4nsx/Vyn-Logistic"
     }
@@ -90,8 +94,8 @@
     {
       "year": "2025",
       "title": {
-        "en": "Top 5 Best Student Team - Aptos Hackathon",
-        "vn": "Top 5 đội sinh viên xuất sắc nhất - Aptos Hackathon"
+        "en": "Top 5 Student Teams - Aptos Hackathon",
+        "vn": "Top 5 Đội sinh viên xuất sắc nhất - Aptos Hackathon"
       },
       "issuer": {
         "en": "Aptos Vietnam - Alpha Team",
@@ -107,8 +111,8 @@
         "vn": "Lotus Hackathon"
       },
       "issuer": {
-        "en": "LotusHacks - HackHavard - GenAI Fund",
-        "vn": "LotusHacks - HackHavard - GenAI Fund"
+        "en": "LotusHacks - HackHarvard - GenAI Fund",
+        "vn": "LotusHacks - HackHarvard - GenAI Fund"
       },
       "type": ["hackathon", "recognition"],
       "url": ""
@@ -155,8 +159,8 @@
     {
       "year": "2024",
       "title": {
-        "en": "750 TOEIC",
-        "vn": "750 điểm TOEIC"
+        "en": "TOEIC 750",
+        "vn": "Chứng chỉ TOEIC 750"
       },
       "issuer": {
         "en": "IIG Vietnam",

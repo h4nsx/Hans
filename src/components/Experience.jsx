@@ -105,6 +105,11 @@ export default function Experience({ experience }) {
               {job.location && (
                 <p className="text-secondary text-[0.95rem] mt-0.5">{job.location}</p>
               )}
+              {job.description && job.description[lang] && (
+                <p className="text-secondary text-sm mt-0.5">
+                  {job.description[lang]}
+                </p>
+              )}
             </div>
           </div>
         );
