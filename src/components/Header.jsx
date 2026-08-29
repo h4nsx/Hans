@@ -50,7 +50,7 @@ export default function Header({ personal }) {
 
         {/* Row 4: Role + Location */}
         <p className="text-secondary text-base mb-5">
-          {personal.role[lang]} · {personal.location}
+          {personal.role[lang]} (@h4nsx) · {typeof personal.location === 'object' ? personal.location[lang] : personal.location}
         </p>
 
         {/* Row 5: Links + View CV */}

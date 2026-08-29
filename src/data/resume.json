@@ -5,13 +5,16 @@
       "vn": "Võ Tuấn Hùng"
     },
     "role": {
-      "en": "Fresher Fullstack Developer",
-      "vn": "Fresher Lập trình viên Fullstack"
+      "en": "Fullstack Engineer",
+      "vn": "Kỹ sư Fullstack"
     },
-    "location": "Ho Chi Minh city, Vietnam",
+    "location": {
+      "en": "Ho Chi Minh city, Vietnam",
+      "vn": "TP. Hồ Chí Minh, Việt Nam"
+    },
     "bio": {
-      "en": "I'm a passionate developer striving to create intuitive and engaging experiences. I'm a big believer that things can always be simpler than we think with applies tech on solution.",
-      "vn": "Mình là một lập trình viên Fullstack, có niềm đam mê với việc tạo ra những trải nghiệm trực quan và hấp dẫn. Mình tin rằng mọi thứ đều có thể đơn giản hơn chúng ta nghĩ với áp dụng công nghệ vào giải pháp."
+      "en": "Fullstack Engineer specializing in scalable architectures, Web3 security, and AI-driven automation. I bridge the gap between complex technical challenges and elegant, business-driven solutions.",
+      "vn": "Kỹ sư Fullstack chuyên về kiến trúc hệ thống mở rộng, bảo mật Web3 và tự động hóa bằng AI. Tôi tập trung vào việc biến các thách thức kỹ thuật phức tạp thành những giải pháp tối ưu và mang lại giá trị thực tiễn."
     },
     "avatarUrl": "https://res.cloudinary.com/do5jy6iqh/image/upload/f_auto,q_auto/avt_h4rwvq",
     "cvUrl": {
@@ -21,13 +24,13 @@
     "availability": {
       "available": true,
       "status": {
-        "en": "Open to opportunities",
-        "vn": "Đang tìm kiếm cơ hội mới"
+        "en": "Open to collaborations",
+        "vn": "Sẵn sàng hợp tác"
       }
     },
     "links": [
-      { "name": "Email", "url": "mailto:contact@hans-dev.eu.org" },
-      { "name": "LinkedIn", "url": "https://linkedin.com/in/tuan-hung-vo-5822b1374" },
+      { "name": "Email", "url": "mailto:votuanhung1205.work@gmail.com" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/in/hans-vo" },
       { "name": "GitHub", "url": "https://github.com/h4nsx" }
     ]
   },
@@ -35,13 +38,44 @@
     {
       "startDate": "Jul 2025",
       "endDate": "Aug 2025",
-      "company": "NB-Global Group",
+      "company": {
+        "en": "NB-Global Group",
+        "vn": "NB-Global Group"
+      },
       "role": {
         "en": "AI Automation - Intern",
         "vn": "Thực tập sinh AI Automation"
       },
-      "location": "California, US - Remote",
-      "url": "https://www.linkedin.com/company/nb-global-group/"
+      "location": {
+        "en": "California, US - Remote",
+        "vn": "California, Mỹ - Từ xa"
+      },
+      "url": "https://www.linkedin.com/company/nb-global-group/",
+      "description": {
+        "en": ["Engineered intelligent automation pipelines to streamline workflows and reduce manual operational overhead.", "Integrated AI models with existing business logic to drive data-centric decision making."],
+        "vn": ["Xây dựng các luồng tự động hóa thông minh nhằm tối ưu hóa quy trình làm việc và giảm thiểu chi phí vận hành thủ công.", "Tích hợp mô hình AI vào logic nghiệp vụ để thúc đẩy việc ra quyết định dựa trên dữ liệu."]
+      }
+    },
+    {
+      "startDate": "Aug 2026",
+      "endDate": "Now",
+      "company": {
+        "en": "SongHungThuan Limited Liability Company",
+        "vn": "Công ty TNHH Sông Hưng Thuận"
+      },
+      "role": {
+        "en": "FullStack Engineer (IoT)",
+        "vn": "Kỹ sư Fullstack (IoT)"
+      },
+      "location": {
+        "en": "Ho Chi Minh city, Vietnam",
+        "vn": "TP. Hồ Chí Minh, Việt Nam"
+      },
+      "url": "https://songhungthuan.com/",
+      "description": {
+        "en": ["Architected robust full-stack solutions bridging physical IoT devices with scalable cloud infrastructure.", "Optimized real-time data ingestion and processing systems for high availability and low latency."],
+        "vn": ["Thiết kế kiến trúc giải pháp Fullstack kết nối thiết bị IoT vật lý với hạ tầng đám mây có khả năng mở rộng.", "Tối ưu hóa hệ thống thu thập và xử lý dữ liệu thời gian thực, đảm bảo tính sẵn sàng cao và độ trễ thấp."]
+      }
     }
   ],
   "projects": [
@@ -49,8 +83,8 @@
       "year": "2025",
       "name": "RugPull Detection",
       "description": {
-        "en": "An open-source analytics tool built with React and Numpas to detect rugpulls based on Isolation Forest algorithms on Solana Ecosystem.",
-        "vn": "Một công cụ phân tích mã nguồn mở được xây dựng bằng React và Numpas để phát hiện rugpulls dựa trên thuật toán Isolation Forest trên hệ sinh thái Solana"
+        "en": "Architected an open-source analytics engine using React and Pandas/NumPy. Deployed Isolation Forest algorithms to detect malicious smart contracts and protect liquidity on the Solana Ecosystem.",
+        "vn": "Xây dựng công cụ phân tích mã nguồn mở sử dụng React và Pandas/NumPy. Áp dụng thuật toán Isolation Forest để phát hiện các smart contract độc hại và bảo vệ thanh khoản trên hệ sinh thái Solana."
       },
       "url": "https://github.com/h4nsx/Rugpull-Detection"
     },
@@ -58,8 +92,8 @@
       "year": "2025",
       "name": "SafeSwap",
       "description": {
-        "en": "A web tool for swap token on Aptos Ecosystem with safety by analyzed the transaction history and liquidty of itself before hitting a swap button.",
-        "vn": "Công cụ web để swap token trên hệ sinh thái Aptos một cách an toàn bằng cách phân tích lịch sử giao dịch và thanh khoản của chính nó trước khi nhấn nút swap."
+        "en": "Designed a secure token-swapping protocol on the Aptos Ecosystem. Implemented real-time transaction history and liquidity analysis to mitigate risk before swap execution.",
+        "vn": "Thiết kế giao thức hoán đổi token an toàn trên hệ sinh thái Aptos. Tích hợp phân tích lịch sử giao dịch và thanh khoản theo thời gian thực để giảm thiểu rủi ro trước khi thực hiện giao dịch."
       },
       "url": "https://github.com/h4nsx/SafeSwap-Token"
     },
@@ -67,8 +101,8 @@
       "year": "2026",
       "name": "Vyn Logistic",
       "description": {
-        "en": "An AI System with 2 streams running independent at a same time for tracking and analyzing data of logistic process to optimize itself.",
-        "vn": "Một hệ thống AI với 2 luồng xử lý độc lập chạy song song để theo dõi và phân tích dữ liệu của quy trình logistics nhằm tối ưu hóa chính nó."
+        "en": "Engineered an AI-driven system featuring dual independent data streams for tracking, analyzing, and self-optimizing logistics processes in real-time.",
+        "vn": "Phát triển hệ thống ứng dụng AI với hai luồng dữ liệu độc lập, theo dõi, phân tích và tự động tối ưu hóa các quy trình logistics theo thời gian thực."
       },
       "url": "https://github.com/h4nsx/Vyn-Logistic"
     }
@@ -177,6 +211,56 @@
       },
       "type": ["award", "medal"],
       "url": ""
+    }
+  ],
+  "services": [
+    {
+      "id": "ai-automation",
+      "icon": "brain",
+      "title": {
+        "en": "AI & Automation",
+        "vn": "AI & Tự động hóa"
+      },
+      "description": {
+        "en": "Intelligent automation pipelines, data-driven decision systems, and AI model integration that streamline your operations and reduce overhead.",
+        "vn": "Xây dựng luồng tự động hóa thông minh, hệ thống ra quyết định dựa trên dữ liệu và tích hợp mô hình AI để tối ưu hóa vận hành."
+      },
+      "highlights": {
+        "en": ["Custom AI pipelines", "Process automation", "Data analytics & optimization", "Real-time monitoring systems"],
+        "vn": ["Xây dựng pipeline AI tùy chỉnh", "Tự động hóa quy trình", "Phân tích & tối ưu hóa dữ liệu", "Hệ thống giám sát thời gian thực"]
+      }
+    },
+    {
+      "id": "web3-security",
+      "icon": "shield",
+      "title": {
+        "en": "Web3 & Security",
+        "vn": "Web3 & Bảo mật"
+      },
+      "description": {
+        "en": "Secure blockchain applications, smart contract analytics, and DeFi tools built with security-first architecture on Solana, Aptos, and EVM chains.",
+        "vn": "Ứng dụng blockchain an toàn, phân tích smart contract và công cụ DeFi được xây dựng với kiến trúc bảo mật trên Solana, Aptos và EVM."
+      },
+      "highlights": {
+        "en": ["Smart contract analysis", "DeFi protocol development", "Security auditing tools", "On-chain data analytics"],
+        "vn": ["Phân tích smart contract", "Phát triển giao thức DeFi", "Công cụ kiểm tra bảo mật", "Phân tích dữ liệu on-chain"]
+      }
+    },
+    {
+      "id": "fullstack-iot",
+      "icon": "layers",
+      "title": {
+        "en": "Fullstack & IoT",
+        "vn": "Fullstack & IoT"
+      },
+      "description": {
+        "en": "End-to-end web applications and IoT solutions — from responsive frontends to scalable cloud backends with real-time data processing.",
+        "vn": "Ứng dụng web toàn diện và giải pháp IoT — từ giao diện responsive đến backend đám mây có khả năng mở rộng với xử lý dữ liệu thời gian thực."
+      },
+      "highlights": {
+        "en": ["Responsive web applications", "Cloud-native backends", "IoT device integration", "Real-time dashboards"],
+        "vn": ["Ứng dụng web responsive", "Backend cloud-native", "Tích hợp thiết bị IoT", "Dashboard thời gian thực"]
+      }
     }
   ]
 }

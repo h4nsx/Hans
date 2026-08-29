@@ -8,6 +8,26 @@ export default function Experience({ experience }) {
 
   if (!experience || experience.length === 0) return null;
 
+  // ── Month localization ──────────────────────────────────────────────────
+  const MONTH_VN = {
+    Jan: 'Tháng 1', Feb: 'Tháng 2', Mar: 'Tháng 3', Apr: 'Tháng 4',
+    May: 'Tháng 5', Jun: 'Tháng 6', Jul: 'Tháng 7', Aug: 'Tháng 8',
+    Sep: 'Tháng 9', Oct: 'Tháng 10', Nov: 'Tháng 11', Dec: 'Tháng 12',
+  };
+
+  /** Translate an English month abbreviation based on current lang. */
+  function localizeMonth(month) {
+    if (!month) return null;
+    return lang === 'vn' ? (MONTH_VN[month] ?? month) : month;
+  }
+
+  /** Format a localized "month year" string.  EN: "Aug 2026"  VN: "Tháng 8 - 2026" */
+  function formatMonthYear(month, year) {
+    const m = localizeMonth(month);
+    if (!m) return year;
+    return lang === 'vn' ? `${m} - ${year}` : `${m} ${year}`;
+  }
+
   /**
    * Parses a date string like "Jul 2025" → { month: "Jul", year: "2025" }
    * Falls back gracefully for bare year strings like "2025".
@@ -19,22 +39,10 @@ export default function Experience({ experience }) {
     return { month: null, year: parts[0] }; // bare year fallback
   }
 
-  /**
-   * Builds the display strings for the date range:
-   *
-   * Same year  →  mobile: "Jul — Aug 2025"
-   *            →  desktop left: "Jul — Aug"  right: "2025"
-   *
-   * Cross year →  mobile: "Jul 2024 — Aug 2025"
-   *            →  desktop left: "Jul 2024"   right: "Aug 2025"
-   *
-   * Ongoing    →  mobile: "Jul 2025 — Now"
-   *            →  desktop left: "Jul 2025"   right: "Now"
-   */
   function formatRange(job) {
     const start = parseDate(job.startDate ?? job.startYear);
     const rawEnd = job.endDate ?? job.endYear ?? '';
-    const isOngoing = !rawEnd || rawEnd.trim() === '';
+    const isOngoing = !rawEnd || /^(present|now)/i.test(rawEnd.trim());
     const end = isOngoing ? null : parseDate(rawEnd);
 
     const sameYear = !isOngoing && end && start && start.year === end.year;
@@ -42,19 +50,21 @@ export default function Experience({ experience }) {
     let mobile, desktopLeft, desktopRight;
 
     if (isOngoing) {
-      mobile = `${start.month ? `${start.month} ` : ''}${start.year} — ${t.present}`;
-      desktopLeft = `${start.month ? `${start.month} ` : ''}${start.year}`;
+      mobile = `${formatMonthYear(start.month, start.year)} — ${t.present}`;
+      desktopLeft = formatMonthYear(start.month, start.year);
       desktopRight = t.present;
     } else if (sameYear) {
-      // Collapse the year: "Jul — Aug 2025"
-      const startLabel = start.month ?? start.year;
-      const endLabel = end.month ?? end.year;
-      mobile = `${startLabel} — ${endLabel} ${start.year}`;
-      desktopLeft = `${startLabel} — ${endLabel}`;
+      // Collapse the year:  EN: "Jul — Aug 2025"  VN: "Tháng 7 — Tháng 8 - 2025"
+      const sm = localizeMonth(start.month) ?? start.year;
+      const em = localizeMonth(end.month) ?? end.year;
+      mobile = lang === 'vn'
+        ? `${sm} — ${em} - ${start.year}`
+        : `${sm} — ${em} ${start.year}`;
+      desktopLeft = `${sm} — ${em}`;
       desktopRight = start.year;
     } else {
-      const startLabel = `${start.month ? `${start.month} ` : ''}${start.year}`;
-      const endLabel = end ? `${end.month ? `${end.month} ` : ''}${end.year}` : '';
+      const startLabel = formatMonthYear(start.month, start.year);
+      const endLabel = end ? formatMonthYear(end.month, end.year) : '';
       mobile = `${startLabel} — ${endLabel}`;
       desktopLeft = startLabel;
       desktopRight = endLabel;
@@ -71,7 +81,7 @@ export default function Experience({ experience }) {
         return (
           <div key={idx} className="flex flex-col sm:flex-row gap-2 sm:gap-16 items-start">
             {/* ── Date range column ── */}
-            <div className="text-secondary sm:w-28 shrink-0 flex items-center gap-1.5">
+            <div className="text-secondary sm:w-40 shrink-0 flex items-center gap-1.5">
               {/* Pulsing dot for ongoing jobs */}
               {isOngoing && (
                 <span className="relative flex h-1.5 w-1.5 shrink-0">
@@ -94,7 +104,7 @@ export default function Experience({ experience }) {
             <div className="flex-1">
               <h3 className="group inline-flex items-center gap-1 font-medium text-primary cursor-pointer">
                 <a href={job.url} target="_blank" rel="noreferrer" className="hover:text-secondary transition-colors">
-                  {job.role[lang]} {t.at} {job.company}
+                  {job.role[lang]} {t.at} {typeof job.company === 'object' ? job.company[lang] : job.company}
                 </a>
                 {job.url && (
                   <span className="text-secondary text-xs relative top-[1px] group-hover:-translate-y-[1px] group-hover:translate-x-[1px] group-hover:text-primary transition-transform">
@@ -103,7 +113,14 @@ export default function Experience({ experience }) {
                 )}
               </h3>
               {job.location && (
-                <p className="text-secondary text-[0.95rem] mt-0.5">{job.location}</p>
+                <p className="text-secondary text-[0.95rem] mt-0.5">{typeof job.location === 'object' ? job.location[lang] : job.location}</p>
+              )}
+              {job.description && job.description[lang] && (
+                <ul className="mt-3 space-y-2 list-disc list-outside ml-4 text-secondary/90 text-[0.95rem] leading-relaxed">
+                  {job.description[lang].map((desc, i) => (
+                    <li key={i}>{desc}</li>
+                  ))}
+                </ul>
               )}
             </div>
           </div>
